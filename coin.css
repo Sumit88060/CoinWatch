@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-side {
+  flex-basis: 30%;
+}
+
+.right-side {
+  flex-basis: 70%;
+}
+
+.coin-image {
+  padding: 20px;
+  text-align: center;
+}
+
+.coin-image img {
+  width: 50%;
+  height: 50%;
+}
+
+.coin-name {
+  text-align: center;
+}
+
+.coin-summary {
+  padding: 20px;
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.coin-details {
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.rank,
+.current-price,
+.market-cap {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.add-to-favorite {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-to-favorite button {
+  padding: 5px;
+  background-color: #df4824;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.add-to-favorite button:hover {
+  cursor: pointer;
+}
+
+.chart-filter {
+  text-align: center;
+  margin-top: 20px;
+}
+.chart-filter button {
+  padding: 10px 20px;
+  background-color: white;
+  color: #f16e4d;
+  border: 1px solid #f16e4d;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3 ease;
+}
+
+.chart-filter button.active {
+  background-color: #df4824;
+  color: white;
+}
+
+.chart-filter button:hover {
+  background-color: #df4824;
+  color: white;
+  cursor: pointer;
+}

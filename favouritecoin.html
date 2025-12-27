@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite coins</title>
+    <link rel="stylesheet" href="favouritecoin.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left"><a href="index.html">CRYPTO TRACKER</a></div>
+        <div class="nav-right">
+          <a href="index.html" class="nav-button">Home</a>
+          <a href="favouritecoin.html" class="nav-button">Liked Coins</a>
+
+          <div class="search-container">
+            <input type="text" id="search" autocomplete="off" />
+            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+            <div id="search-box" class="search-box">
+              <h3>Seach Results</h3>
+              <i id="close-search-box" class="fa-solid fa-xmark"></i>
+
+              <div id="search-result" class="search-result"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="header-container">
+        <h1>Favorite Coins</h1>
+      </div>
+      <div class="shimmer-container" style="display: none">
+        <div class="shimmer"></div>
+      </div>
+
+      <div class="search-liked-coins-container">
+        <input
+          type="text"
+          id="search-liked-coins-box"
+          placeholder="Search for liked coins"
+        />
+      </div>
+      <div class="table-container">
+        <table id="favorite-table">
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>Icon</th>
+              <th>Name</th>
+              <th>
+                Price <i id="sort-price-asc" class="fa-solid fa-arrow-up"></i>
+                <i id="sort-price-desc" class="fa-solid fa-arrow-down"></i>
+              </th>
+              <th>
+                24h Volume
+                <i id="sort-vol-asc" class="fa-solid fa-arrow-up"></i>
+                <i id="sort-vol-desc" class="fa-solid fa-arrow-down"></i>
+              </th>
+              <th>
+                Market Cap
+                <i id="sort-market-cap-asc" class="fa-solid fa-arrow-up"></i>
+                <i id="sort-market-cap-desc" class="fa-solid fa-arrow-down"></i>
+              </th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="no-favorite" id="no-favorite">
+        You haven't added any coins to favorite, explore more and to favorite.
+      </p>
+    </div>
+    <script src="favoritecoin.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin details</title>
+    <link rel="stylesheet" href="coin.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left"><a href="index.html">CRYPTO TRACKER</a></div>
+        <div class="nav-right">
+          <a href="index.html" class="nav-button">Home</a>
+          <a href="favouritecoin.html" class="nav-button">Liked Coins</a>
+
+          <div class="search-container">
+            <input type="text" id="search" autocomplete="off" />
+            <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+            <div id="search-box" class="search-box">
+              <h3>Seach Results</h3>
+              <i id="close-search-box" class="fa-solid fa-xmark"></i>
+
+              <div id="search-result" class="search-result"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="left-side">
+          <div class="coin-image">
+            <img id="coinImage" src="" />
+          </div>
+          <div class="coin-name">
+            <h3 id="coinName"></h3>
+          </div>
+          <div class="coin-summary">
+            <p id="coinSummary"></p>
+          </div>
+          <div class="coin-details">
+            <div class="rank">
+              <span><strong>Rank:</strong></span>
+              <span id="coinRank"></span>
+            </div>
+            <div class="current-price">
+              <span><strong>Current Price:</strong></span>
+              <span id="coinCurrentPrice"></span>
+            </div>
+            <div class="market-cap">
+              <span><strong>Market Cap:</strong></span>
+              <span id="coinMarketCap"></span>
+            </div>
+          </div>
+          <div class="add-to-favorite">
+            <button id="add-to-fav-btn">Add to Favorite</button>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="chart-filter">
+            <button id="24h">24h</button>
+            <button id="30d">30d</button>
+            <button id="3m">3m</button>
+          </div>
+          <div class="chart">
+            <canvas id="coinChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="shimmer-container" style="display: none">
+        <div class="shimmer"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="coin.js"></script>
+    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
+  </body>
+</html>
